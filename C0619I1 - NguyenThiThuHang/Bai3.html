@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    let array = [7,11,5,-4,3,2,0,68,77,10];
+    let max = array[0];
+    let i = 1;
+    let sum = 0;
+    for (; i < array.length; i++) {
+        if (max<array[i]){
+            max = array[i];
+        }
+        sum+=array[i];
+    }
+    let avg = sum/array.length;
+    alert("Phan tu lon nhat trong mang la: "+max + " o vi tri thu " + i + " va gia tri trung binh cua mang la: " + avg );
+</script>
+</body>
+</html>

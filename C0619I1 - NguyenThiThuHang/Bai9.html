@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai9</title>
+</head>
+<body>
+<script>
+    let a = [7,11,5,-4,3,2,0,68,77,10];
+    let b = [1,2,-5,4,9,2,0,-13,17,16];
+    let c = Array();
+    let p = a.length + b.length;
+    for (let i = 0; i < p; i++) {
+        if(i<a.length){
+            c[i]=a[i];
+        }else c[i]=b[i-a.length];
+    }
+    alert(c);
+</script>
+</body>
+</html>
