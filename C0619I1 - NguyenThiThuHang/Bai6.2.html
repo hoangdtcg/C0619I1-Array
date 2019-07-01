@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<input type="text" id="inputString">
+<button type="button" onclick="add_element_to_array()">Add</button>
+<button type="button" onclick="display_array()">Display</button>
+<button type="button" onclick="changeCharacter">Change</button>
+<p id="result"></p>
+<script>
+    let x = 0;
+    let arr = Array();
+    function add_element_to_array() {
+        arr[x] = document.getElementById('inputString').value;
+        x++;
+        document.getElementById('inputString').value = "";
+
+    }
+    function display_array() {
+        let e = "<hr>";
+        for (let i = 0; i < arr.length; i++) {
+            e+=arr[i] + "<br>";
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+    function changeCharacter() {
+        let str = document.getElementById('inputString').value.toString();
+        let arr = [str[0]];
+        for (let i = 1; i < arr.length; i++) {
+            if (str[i]==='-'){
+                str[i] = '_';
+            }
+        }
+        document.getElementById('result').innerHTML = arr.toString();
+    }
+
+
+</script>
+</body>
+</html>
