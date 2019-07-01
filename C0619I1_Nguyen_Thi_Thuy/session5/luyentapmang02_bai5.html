@@ -1,0 +1,24 @@
+<!--Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi1=prompt("nhập chuỗi 1: ")
+    let chuoi2 = prompt("nhập chuỗi 2: ")
+    if(chuoi1.length==chuoi2.length){
+        for (i=0; i<chuoi1.length;i++){
+            if( chuoi1[i]==chuoi2[i]){
+                alert('chuoi 1 bằng chuỗi 2')
+            }else {
+                alert('chuỗi 1 khác chuỗi 2')
+            }
+        }
+    }else {
+        alert('chuỗi 1 khác chuỗi 2')}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!--Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên-->
+<!--và đảo ngược các phần tử trong mảng đó.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let interger = [];
+    let input = '';
+    while (input !== "ok"){
+        input = prompt("Nhập số");
+        if(!isNaN(Number(input))){
+            interger.push(Number(input));
+        }
+
+    }
+    document.write(interger)
+    function dao(mang){
+        let mang2=mang.reverse();
+        return mang2;
+    }
+    alert(dao(interger));
+
+
+
+</script>
+</body>
+</html>
