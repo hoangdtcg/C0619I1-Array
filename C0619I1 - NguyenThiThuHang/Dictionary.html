@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<h1>Simple Dictionary</h1>
+<h3>List word you can translate: pink, red, green, blue, yellow</h3>
+<input id="inputWord" type="text">
+<button type="submit" onclick="translateWord();">Translate</button>
+<br>
+<p id="result">Result</p>
+<script>
+    let engWord = ['pink', 'red', 'green', 'blue', 'yellow'];
+    let vnWord = ['màu hồng', 'màu đỏ', 'màu xanh lá cây', 'màu xanh nước biển', 'màu vàng'];
+
+    function translateWord() {
+        let input = document.getElementById('inputWord').value;
+
+        for (let i = 0; i < engWord.length; i++) {
+            if (input === engWord[i]) {
+                document.getElementById('result').innerHTML = "Result is: " + vnWord[i];
+                break;
+            } else {
+                document.getElementById('result').innerHTML = "The word isn't exit";
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
