@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let english = ['hello', 'goodbye', 'name', 'national', 'beutiful'];
+    let vietnanmes = ['Xin chào', 'Tạm biệt', 'Tên', 'Quốc gia', 'Xinh đẹp'];
+    let check = window.prompt("Nhập từ cần tra.");
+    while (check != 'quit') {
+        for (let i = 0; i <= english.length; i++) {
+            if (english[i] === check) {
+                alert("Nghĩa của từ " + check + " là: " + vietnanmes[i]);
+                check = window.prompt("Nhập từ cần tra. Gõ 'quit' để dừng tìm kiếm");
+
+            }
+        }
+        alert("Không tìm thấy");
+        check = window.prompt("Nhập từ cần tra. Gõ 'quit' để dừng tìm kiếm");
+    }
+
+</script>
+</body>
+</html>
