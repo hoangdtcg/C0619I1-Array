@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function bai1() {
+            let myColor = ["Red", "Green", "White", "Black"];
+            console.log(myColor.toString());
+            console.log(myColor.join());
+            console.log(myColor.join('+'));
+        }
+        function bai2() {
+            const num=prompt();
+            const str = num.toString();
+            const result = [str[0]];
+
+            for(let x=1; x<str.length; x++)
+            {
+                if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+                {
+                    result.push('-', str[x]);
+                }
+                else
+                {
+                    result.push(str[x]);
+                }
+            }
+            console.log(result.join(''));
+        }
+        function bai3()
+        {
+            let text = prompt("Nhap chuoi ", );
+            let str = text.toString();
+            let arr =[];
+            let  UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+            for (let i=0;i<str.length;i++)
+            {
+                if (UPPER.indexOf(str[i]) !== -1)   //kiem tra ohan tu thu i  trong mang str co trong mang UPPER khong
+                {                                   // neu co thi chuyen sang lowercase
+                    arr.push(str[i].toLowerCase());
+                    }  else if(LOWER.indexOf(str[i]) !== -1) //tuong tu
+                    {
+                    arr.push(str[i].toUpperCase());
+                } else {
+                    arr.push(str[i]);                 // truong hop nhap vao la 1 so, khong phai chu cai thi in ra mang arr
+                }
+            }
+
+            console.log(str);
+            console.log(arr.join(''));
+        }
+      //  bai1();
+      //  bai2();
+        bai3();
+    </script>
+</body>
+</html>
