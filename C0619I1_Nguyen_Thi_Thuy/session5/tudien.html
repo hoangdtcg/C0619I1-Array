@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="seach">
+<button id="timkiem" value="tìm kiếm" onclick="tudien();"> tìm kiếm </button>
+<script>
+    let english = ["banana", "apple", "grapes", "orange"]
+    let vietnam = ["chuoi", "tao", "nho", "cam"]
+
+    function tudien() {
+        let tim= document.getElementById("seach").value
+        let check=false;
+        for (let i=0; i< english.length;i++) {
+            if (tim === english[i]) {
+                check=true;
+                alert(vietnam[i])
+            }
+
+        }
+        if (!check){
+            alert(tim +'không trong từ điển')
+        }
+    }
+</script>
+</body>
+</html>

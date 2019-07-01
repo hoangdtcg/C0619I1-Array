@@ -1,0 +1,37 @@
+<!--Bài 3- Viết chương trình khởi tạo mảng số nguyên. -->
+<!--Hiển hiện giá trị lớn nhất trong mảng đó. -->
+<!--In ra giá trị trung bình của các phần tử trong mảng.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let interger = [];
+    let input = '';
+    while (input !== "ok"){
+        input = prompt("Nhập số");
+        if(!isNaN(Number(input))){
+            interger.push(Number(input));
+        }
+
+    }
+
+    document.write(interger);
+    let max=interger[0];
+    let sum=0;
+    for (let i=0; i<interger.length; i++) {
+        if (interger[i]>max){
+            max=interger[i];
+        }
+        sum+=interger[i];
+        tb=sum/interger.length;
+    }
+    document.write(" số lớn nhất là: " + max +"<br>" )
+    document.write(" trung bình là: " + tb )
+
+</script>
+</body>
+</html>
