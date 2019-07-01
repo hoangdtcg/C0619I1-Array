@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<input type="number" id="inputElement">
+<button type="button" id="btnAdd" onclick="add_array()" >Add</button>
+<button type="button" id="btnDisplay" onclick="display_array()" >Display</button>
+<button type="button" id="btnReverse" onclick="reverse_array()" >Reverse</button>
+
+
+<div id="result"></div>
+<script>
+let x = 0;
+let array = Array();
+function add_array(){
+    array[x] = document.getElementById("inputElement").value;
+    x++;
+    document.getElementById("inputElement").value="";
+}
+function display_array() {
+    let e = "<hr>";
+    for (let i = 0; i <array.length; i++) {
+        e+= array[i] + "<br>";
+    }
+    document.getElementById("result").innerHTML = e;
+
+}
+function reverse_array() {
+    let first = 0;
+    let last = array.length - 1;
+    while (first<last){
+        let change = array[first];
+        array[first] = array[last];
+        array[last] = change;
+        first++;
+        last--;
+    }
+    document.getElementById("result").innerHTML = array;
+}
+</script>
+</body>
+</html>
