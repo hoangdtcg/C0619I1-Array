@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let number = Number(prompt("nhập số: "));
+    let n = 2;
+
+
+     while (count < number){
+        if (kiemtraNguyenTo(n)){
+            document.write(n);
+            count++;}
+
+            n++;
+    }
+    function kiemtraNguyenTo(n) {
+         if (n<2){
+            return false};
+        if (n==2){
+            return true};
+            for (let i = 2; i <= Math.sqrt( n ); i++ ){
+                if (n % i ==0){
+                    return false;
+                }
+            }
+            return  true;}
+
+</script>
+</body>
+</html>
