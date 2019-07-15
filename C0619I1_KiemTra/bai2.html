@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mang</title>
+</head>
+<body>
+<script>
+    let a = [2, 4, 5, 6, 7, 8, 9];
+
+    function kiemtraNguyenTo(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function check_so_nguyen_to(a) {
+        let a_ham = [];
+        for (i = 0; i < a.length; i++) {
+            if (kiemtraNguyenTo(a[i])) {
+                a_ham.push(a[i]);
+            }
+        }
+        return a_ham
+    }
+
+    console.log(check_so_nguyen_to(a));
+</script>
+</body>
+</html>
