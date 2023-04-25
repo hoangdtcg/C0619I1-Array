@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    var str = prompt();
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for(var x = 0; x < str.length; x++)
+        {
+            if(UPPER.indexOf(str[x]))
+        {
+            result.push(str[x].toUpperCase());
+        }
+            else if(LOWER.indexOf(str[x]))
+        {
+            result.push(str[x].toLowerCase());
+        }
+        }
+        document.write(result.join(''));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
